@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    // Search under node_modules for non-relative imports.
+    "moduleResolution": "node",
+    // Import non-ES modules as default imports.
+    "esModuleInterop": true,
+    // use typescript to transpile jsx to js
+    "jsx": "react",
+    // Process & infer types from .js files.
+    "allowJs": true,
+    // enable strict null checks as a best practice
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "removeComments": true,
+    "alwaysStrict": true,
+    "allowUnreachableCode": false,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true,
+    "importHelpers": true,
+    "strict": true,
+    "typeRoots": [
+      "./node_modules/@types/*"
+    ]
+  },
+  "exclude": [
+    "./node_modules",
+    "./webpack",
+    "./build"
+  ]
+}
