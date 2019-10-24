@@ -4,8 +4,6 @@ ARG NODE_ENV
 
 ENV NODE_ENV $NODE_ENV
 
-RUN echo $NODE_ENV
-
 RUN apk add yarn
 
 # create node_modules folder and set permissions to user=node group=node
