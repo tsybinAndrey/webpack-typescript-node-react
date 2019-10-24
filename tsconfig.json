@@ -25,9 +25,13 @@
       "./node_modules/@types/*"
     ]
   },
+  "include": [
+    "src/**/*"
+  ],
   "exclude": [
-    "./node_modules",
-    "./webpack",
-    "./build"
+    "node_modules",
+    "webpack",
+    "build",
+    "nginx"
   ]
 }

@@ -13,6 +13,7 @@ const app = express();
 frontendMiddleware(
   app,
   path.join(runningDir, 'build/front/index.html'),
+  path.join(runningDir, 'build/front/'),
   webpackConfig as Configuration,
 );
 

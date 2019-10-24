@@ -6,8 +6,11 @@ import webpackDevMiddleware from 'webpack-dev-middleware';
 function setupFrontendMiddleware(
   app: Express,
   pathToIndex: string,
+  pathToAssets: string,
   webpackConfig: Configuration) {
   if (process.env.NODE_ENV === 'production') {
+    app.use('/', express.static(pathToAssets));
+
     app.get('*', (req: express.Request, res: express.Response): void => {
       res.sendFile(pathToIndex);
     });

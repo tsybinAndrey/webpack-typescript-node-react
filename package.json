@@ -4,12 +4,13 @@
   "description": "Simple example of how to set up development environment with docker webpack node.js and react",
   "main": "index.ts",
   "scripts": {
-    "start": "",
-    "server:prod": "node build/server/server.bundle.js",
+    "start": "node build/server/server.bundle.js",
     "server:build": "webpack --config webpack/webpack.server.js --color -p --progress --hide-modules --display-optimization-bailout",
     "server:dev": "webpack --config webpack/webpack.server.js --watch & nodemon --watch build/server build/server/server.bundle.js",
     "front:build": "webpack --config webpack/webpack.front.prod.js --color -p --progress --hide-modules --display-optimization-bailout",
     "tsc:check": "tsc",
+    "docker:dev": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml up --build",
+    "docker:prod": "docker-compose -f docker-compose.yml -f docker-compose.prod.yml up --build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
