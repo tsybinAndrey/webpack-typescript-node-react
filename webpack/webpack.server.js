@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
+const NodemonPlugin = require('nodemon-webpack-plugin');
 
 const fs = require('fs')
 const nodeModules = {}
@@ -58,6 +59,11 @@ module.exports = {
       },
     ],
   },
+
+  plugins: [
+    // works only in webpack watch mode
+    new NodemonPlugin(),
+  ],
 
   node: false,
 
