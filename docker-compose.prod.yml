@@ -6,4 +6,7 @@ services:
         - NODE_ENV=production
     restart: always
   nginx:
+    build:
+      context: .
+      dockerfile: Dockerfile-nginx
     restart: always
